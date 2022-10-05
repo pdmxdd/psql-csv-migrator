@@ -20,7 +20,6 @@ class Cars(Base):
 
 class CarsUsers(Base):
     __tablename__ = "cars_users"
-    # id = Column(BigInteger, primary_key=True)
     user_id = Column(BigInteger)
     car_id = Column(BigInteger)
 
