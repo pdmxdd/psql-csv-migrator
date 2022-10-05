@@ -1,0 +1,17 @@
+version: '3.8'
+
+services: 
+    migration-test-db:
+        image: postgres:10
+        environment:
+            POSTGRES_DB: "postgres"
+            POSTGRES_USER: "postgres"
+            POSTGRES_PASSWORD:  "postgres"
+        ports:
+            - "5555:5432"
+        networks:
+            - "migration"
+
+networks:
+    migration:
+
